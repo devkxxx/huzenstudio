@@ -22,7 +22,7 @@
       font-size: 2.8rem;
       font-weight: 700;
       letter-spacing: 2px;
-      font-family: 'Orbitron', sans-serif; /* nowa czcionka */
+      font-family: 'Orbitron', sans-serif;
     }
 
     .description {
@@ -102,6 +102,52 @@
       font-size: 0.9rem;
       color: #aaa;
     }
+
+    /* === Kontakt Zakładka === */
+    .contact-tab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #5a4e7c;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+
+    .contact-tab:hover {
+      background: #7263a8;
+    }
+
+    .contact-box {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background: #2b2f53;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+
+    .contact-box div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .contact-box img {
+      width: 20px;
+      height: 20px;
+    }
   </style>
 </head>
 <body>
@@ -109,13 +155,12 @@
 <header>Huzen Studio</header>
 
 <section class="description">
-  <p>Cześć! Nazywam się [Twoje Imię]. Zajmuję się grafiką od 2023 roku.  
+  <p>Cześć! Nazywam się Karol. Zajmuję się grafiką od 2025 roku.  
   Pracuję na programach takich jak Canva, Adobe Photoshop oraz Illustrator.  
   Tworzę proste, estetyczne grafiki, animacje i szablony do social mediów.</p>
 </section>
 
 <section class="gallery">
-
   <div class="card">
     <img src="placeholder1.jpg" alt="Grafika 1" />
     <div class="overlay">
@@ -142,10 +187,25 @@
       <p>Cena: XX zł</p>
     </div>
   </div>
-
 </section>
 
 <footer>© 2025 Huzen Studio. Wszystkie prawa zastrzeżone.</footer>
+
+<!-- Zakładka kontaktowa -->
+<div class="contact-tab" onclick="toggleContact()">📬 Skontaktuj się!</div>
+
+<div class="contact-box" id="contactBox">
+  <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" /> Facebook</div>
+  <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg" alt="Instagram" /> Instagram</div>
+  <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discord/discord-original.svg" alt="Discord" /> Discord</div>
+</div>
+
+<script>
+  function toggleContact() {
+    const box = document.getElementById("contactBox");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  }
+</script>
 
 </body>
 </html>
