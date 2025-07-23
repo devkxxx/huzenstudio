@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Huzen Studio - Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f0f5;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header {
+      background: #5a4e7c;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .description {
+      max-width: 700px;
+      margin: 20px auto 40px auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      padding: 0 10px;
+    }
+    .card {
+      position: relative;
+      width: 220px;
+      height: 140px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      cursor: pointer;
+      transition: transform 0.25s ease;
+      background: white;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      z-index: 2;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      background: rgba(90, 78, 124, 0.85);
+      color: white;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 0 0 15px 15px;
+    }
+    .card:hover .overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .overlay p {
+      margin: 0.2em 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header>Huzen Studio</header>
+
+<section class="description">
+  <p>Cześć! Nazywam się [Twoje Imię]. Zajmuję się grafiką od 2023 roku.  
+  Pracuję na programach takich jak Canva, Adobe Photoshop oraz Illustrator.  
+  Tworzę proste, estetyczne grafiki, animacje i szablony do social mediów.</p>
+</section>
+
+<section class="gallery">
+
+  <div class="card">
+    <img src="placeholder1.jpg" alt="Grafika 1" />
+    <div class="overlay">
+      <p><strong>Nazwa grafiki 1</strong></p>
+      <p>Dla: Opis odbiorcy</p>
+      <p>Cena: XX zł</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="placeholder2.jpg" alt="Grafika 2" />
+    <div class="overlay">
+      <p><strong>Nazwa grafiki 2</strong></p>
+      <p>Dla: Opis odbiorcy</p>
+      <p>Cena: XX zł</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="placeholder3.jpg" alt="Grafika 3" />
+    <div class="overlay">
+      <p><strong>Nazwa grafiki 3</strong></p>
+      <p>Dla: Opis odbiorcy</p>
+      <p>Cena: XX zł</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>© 2025 Huzen Studio. Wszystkie prawa zastrzeżone.</footer>
+
+</body>
+</html>
